@@ -52,6 +52,11 @@ export const Image = styled.img`
   height: auto;
 `;
 
+export const Video = styled.video`
+  max-width: 100%;
+  height: auto;
+`;
+
 export const Container = styled.div`
   @media (max-width: 1000px) {
     ${Item}:last-of-type h2 {
