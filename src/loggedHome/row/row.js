@@ -10,7 +10,7 @@ function Rowpost(props) {
     useEffect(() => {
         axios.get(props.url).then(response => {
             console.log(response.data);
-            setMovies(response.data.results.sort(function (a, b) { return 0.5 - Math.random() })[0])
+            setMovies (response.data.results)
         })
     }, )
     const opts = {

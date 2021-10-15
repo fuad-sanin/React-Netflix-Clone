@@ -13,7 +13,7 @@ function Banner() {
     useEffect(() => {
     axios.get(actionMovies).then((response) => {
         console.log(response.data.results[0]);
-        setMovie(response.data.results[19])
+        setMovie(response.data.results.sort(function (a, b) { return 0.5 - Math.random() })[0])
     })
  
 }, [])
