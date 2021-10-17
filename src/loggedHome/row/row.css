@@ -5,16 +5,17 @@
 }
 .poster{
     display: flex;
-    padding: 20px;
+    padding: 10px;
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+   
     
 
 }
 .normal-poster{
     max-height: 275px;
     margin-right: 10px;
+
 }
 .small-poster{
     max-height: 190px;
@@ -25,13 +26,18 @@
 
     
 }
+
 .normal-poster:hover{
     transform: scale(1.1);
     cursor: pointer;
+    z-index: 1;
+    transition: 400ms all;
 }
 .small-poster:hover{
     transform: scale(1.1);
     cursor: pointer;
+    z-index: 1;
+    transition: 400ms all;
 }
 
 
@@ -49,4 +55,8 @@
     .poster-title{
         margin-top: 70px;
     }
+}
+
+.player{
+    width: 50%;
 }
