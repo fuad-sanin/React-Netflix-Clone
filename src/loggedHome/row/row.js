@@ -10,6 +10,7 @@ function Rowpost(props) {
   
   const [movies, setMovies] = useState([]);
   const [urlId, setUrlId] = useState("");
+  
   useEffect(() => {
     axios.get(props.url).then((response) => {
       console.log(response.data);
@@ -25,6 +26,8 @@ function Rowpost(props) {
   };
   const handleMovie = (id) => {
     console.log(id);
+    if (urlId !== "") setUrlId("");
+    else{
     axios
       .get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`)
       .then((response) => {
@@ -33,6 +36,7 @@ function Rowpost(props) {
           setUrlId(response.data.results[0]);
         }
       });
+    }
   };
 
   return (
