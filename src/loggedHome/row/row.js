@@ -3,7 +3,7 @@ import { API_KEY, imageUrl } from "../../constants/constants";
 import YouTube from "react-youtube";
 import "./row.css";
 import axios from "../../axios";
-import movie from "../movie-details/movie";
+// import movie from "../movie-details/movie";
 
 
 function Rowpost(props) {
@@ -17,8 +17,8 @@ function Rowpost(props) {
     });
   });
   const opts = {
-    height: "390",
-    width: "100%",
+    height: "360",
+    width: "50%",
     playerVars: {
       autoplay: 1,
     },
@@ -50,8 +50,9 @@ function Rowpost(props) {
             />
           ))}
         </div>
-        {urlId && movie()} 
-        
+        <div className="yt">
+        { urlId && <YouTube opts={opts} videoId={urlId.key}/> } 
+        </div>
         
        
       </div>

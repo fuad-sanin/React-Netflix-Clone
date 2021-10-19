@@ -39,7 +39,11 @@
     z-index: 1;
     transition: 400ms all;
 }
-
+.yt iframe{
+    width: 50%;
+    margin-left: 25%;
+  
+}
 
 @media (min-width:0px) and (max-width:800px){
     .normal-poster{
