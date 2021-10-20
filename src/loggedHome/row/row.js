@@ -3,6 +3,8 @@ import { API_KEY, imageUrl } from "../../constants/constants";
 import YouTube from "react-youtube";
 import "./row.css";
 import axios from "../../axios";
+import Banner from "../Banner/Banner";
+import ModalVideo from "./ModalVideo";
 // import movie from "../movie-details/movie";
 
 
@@ -10,7 +12,6 @@ function Rowpost(props) {
   
   const [movies, setMovies] = useState([]);
   const [urlId, setUrlId] = useState("");
-  
   useEffect(() => {
     axios.get(props.url).then((response) => {
       console.log(response.data);
@@ -55,7 +56,9 @@ function Rowpost(props) {
           ))}
         </div>
         <div className="yt">
-        { urlId && <YouTube opts={opts} videoId={urlId.key}/> } 
+          
+        {/* { urlId && <YouTube opts={opts} videoId={urlId.key}/> }  */}
+        {urlId && <ModalVideo/>}
         </div>
         
        
